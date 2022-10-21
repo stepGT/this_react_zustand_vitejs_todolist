@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useToDoStore } from '../../data/stores/useToDoStore';
+import CInput from '../components/CInput';
 import styles from './index.module.scss';
 
 const App: React.FC = () => {
@@ -9,13 +10,13 @@ const App: React.FC = () => {
     state.updateTask,
     state.tasks,
   ]);
-  useEffect(() => {
-    createTask('qwerty task');
-  }, []);
+  //
   return (
     <article className={styles.article}>
       <h1 className={styles.title}>ToDo App</h1>
-      <section className={styles.section}></section>
+      <section className={styles.section}>
+        <CInput createTask={createTask} />
+      </section>
       <section className={styles.section}></section>
     </article>
   );
