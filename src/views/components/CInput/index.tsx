@@ -31,6 +31,7 @@ const CInput: React.FC<CInputProps> = ({ createTask }) => {
         onChange={handleOnChange}
         onKeyDown={handleOnKeyDown}
         className={styles.input}
+        placeholder="Enter task"
       />
       <button aria-label="Add" onClick={handleOnClick} className={styles.button} />
     </div>
