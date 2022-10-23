@@ -17,7 +17,9 @@ const App: React.FC = () => {
       <section className={styles.section}>
         <CInput createTask={createTask} />
       </section>
-      <section className={styles.section}></section>
+      <section className={styles.section}>
+        {!tasks.length && <p className={styles.text}>No tasks!</p>}
+      </section>
     </article>
   );
 };

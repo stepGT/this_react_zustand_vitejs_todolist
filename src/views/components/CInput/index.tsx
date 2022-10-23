@@ -12,7 +12,9 @@ const CInput: React.FC<CInputProps> = ({ createTask }) => {
     setValue(e.target.value);
   };
 
-  const handleOnClick = () => {};
+  const handleOnClick = () => {
+    addTask();
+  };
 
   const handleOnKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') addTask();
