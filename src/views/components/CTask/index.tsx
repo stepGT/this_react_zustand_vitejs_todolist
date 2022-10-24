@@ -19,7 +19,7 @@ const CTask: React.FC<CTaskProps> = ({ id, title, onDone, onEdited, onRemoved })
   //
   return (
     <div className={styles.wrap}>
-      <label>
+      <label className={styles.label}>
         <input
           className={styles.checkbox}
           type="checkbox"
