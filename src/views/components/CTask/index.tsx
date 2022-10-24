@@ -17,7 +17,7 @@ const CTask: React.FC<CTaskProps> = ({ id, title, onDone, onEdited, onRemoved })
   //
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
-    if (e.target.checked) onDone(id);
+    if (e.target.checked) setTimeout(() => onDone(id), 300);
   };
   useEffect(() => {
     if (isEdit) inputRef?.current?.focus();
